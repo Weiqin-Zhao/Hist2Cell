@@ -1,0 +1,54 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "/home/r15user3/anaconda3/envs/gene/bin/python3.11",
+		"python.analysis.completeFunctionParens": true,
+		"python.analysis.autoImportCompletions": true
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python: Current File",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal",
+				"args": [
+					// "--lr", "1e-4", 
+					// "--task_name", "test",
+					// "--celltype_num", "80",
+					// "--num_epochs", "2000",
+					// "--batch_size", "1",
+					// "--gpu_list", "1",
+					// "--vit_depth", "3",
+					// "--hop", "2",
+					// "--subgraph_bs", "16",
+					// "--ensenble", "True",
+					// "--graph_data_path", "/home/r15user3/Documents/shared_project/Hist2Cell/code/data_preprocessing/extracted_graph/human_lung_cell2location_high250gene_celltype80_KimiaNet_extracted_graphs",
+					// "--batch_size", "128",
+
+					"--batch_size", "1", 
+					"--rawimg_graph_path", "//data1/r20user3/shared_project/Hist2Cell/code/data_preprocessing/rawimg_graph/her2st_selectedlr_pca10",
+					"--celltype_num", "10", 
+					"--seed", "3407",
+					"--gpu_list", "0", 
+					"--vit_depth", "1",
+					"--hop", "2",
+					"--subgraph_bs", "16",
+					"--ensemble", "True",
+					"--lr", "1e-4",
+					"--task_name", "test",
+					"--train_set", "/data1/r20user3/shared_project/Hist2Cell/code/training/train_test_splits/her2st/train_leave_D.txt",
+					"--test_set", "/data1/r20user3/shared_project/Hist2Cell/code/training/train_test_splits/her2st/test_leave_D.txt",
+					"--num_epochs", "100",
+
+				],
+			}
+		]
+	},
+}
