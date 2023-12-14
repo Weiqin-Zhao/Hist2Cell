@@ -31,7 +31,7 @@ class PTC_cell(torch.utils.data.Dataset):
         patch = os.listdir(patch_path)
         patch_list = [x.split('.')[0] for x in patch]
 
-        cell_label = pd.read_csv(os.path.join(root, slide, 'cell_ratio.csv'), index_col=0)
+        cell_label = pd.read_csv(os.path.join(root, slide, 'cell_ratio_from_raw70m.csv'), index_col=0)
         gene_label = pd.read_csv(os.path.join(root, slide, 'high_250_stdata.csv'), index_col=0)
         label_df = pd.merge(gene_label, cell_label, left_index=True, right_index=True)
 

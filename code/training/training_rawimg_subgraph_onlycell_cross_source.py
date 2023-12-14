@@ -49,12 +49,12 @@ train_slides = open("/data1/r20user3/shared_project/Hist2Cell/code/training/trai
 test_slides = open("/data1/r20user3/shared_project/Hist2Cell/code/training/train_test_splits/cross_source/test.txt").read().split('\n')
 train_graph_list = list()
 for item in train_slides:
-    train_graph_list.append(torch.load(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/data_preprocessing/rawimg_graph/her2st", item+'.pt')))
+    train_graph_list.append(torch.load(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/data_preprocessing/rawimg_graph/her2st_from_raw70m", item+'.pt')))
 train_dataset = Batch.from_data_list(train_graph_list)
 
 test_graph_list = list()
 for item in test_slides:
-    test_graph_list.append(torch.load(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/data_preprocessing/rawimg_graph/stnet", item+'.pt')))
+    test_graph_list.append(torch.load(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/data_preprocessing/rawimg_graph/stnet_from_raw70m", item+'.pt')))
 test_dataset = Batch.from_data_list(test_graph_list)    
 
 if args.hop <= 2:

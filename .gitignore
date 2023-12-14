@@ -191,6 +191,7 @@ core.*
 /code/analysis/spatial_visualization/her2st/*/*
 /code/analysis/spatial_visualization/humanlung/*/*
 /code/analysis/sptial_colocalization/brca/*/*
+/code/analysis/sptial_colocalization/brca/*.csv
 /code/analysis/sptial_colocalization/cross_source/*/*
 /code/analysis/sptial_colocalization/her2st/*/*
 /code/analysis/sptial_colocalization/humanlung/*/*
