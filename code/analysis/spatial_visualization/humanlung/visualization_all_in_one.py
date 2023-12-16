@@ -13,7 +13,7 @@ def process_cell_type(i, coordinates, cell2location_count2, hist2cell_counts, st
     # Calculate the minimum distance between points
     min_distance = np.min([math.sqrt((coordinates[i][0] - coordinates[j][0])**2 + (coordinates[i][1] - coordinates[j][1])**2) for i in range(len(coordinates)) for j in range(i+1, len(coordinates))])
     # Set the node size as a fraction of the minimum distance (e.g., 25%)
-    node_size = min_distance * 0.030
+    node_size = min_distance * 0.52
 
     figsize(17, 5)
     
@@ -73,8 +73,11 @@ for tif in tif_list:
     
 cell_names = [cell[23:] for cell in list(pd.read_csv("/data1/r20user3/shared_project/Hist2Cell/data/human_lung_cell2location/WSA_LngSP8759311/cell_ratio.csv").columns)[1:]]
 
-os.mkdir("/data1/r20user3/shared_project/Hist2Cell/code/analysis/spatial_visualization/humanlung/all_in_one")
+# os.mkdir("/data1/r20user3/shared_project/Hist2Cell/code/analysis/spatial_visualization/humanlung/all_in_one")
 for case in test_slides:
+    if case != "A50":
+        continue
+    
     os.mkdir(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/analysis/spatial_visualization/humanlung/all_in_one", case))
     
     save_path = "/data1/r20user3/shared_project/Hist2Cell/code/analysis/inference/humanlung/humanlung_epoch100_lr1e-4_densenet_onlycell_"+case+"_best_cell_all_abundance_average.pkl"
