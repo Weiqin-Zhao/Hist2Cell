@@ -201,3 +201,5 @@ core.*
 /code/analysis/super_resolution/stnet/super_resolution_splits/*
 /code/data_preprocessing/brca_cellabundance/BRCA_all_case_RNA_seq_tpm.csv
 /code/data_preprocessing/brca_cellabundance/brca_cellabundance_estimation.h5ad
+/code/analysis/super_resolution/stnet/cell_abundance_paper_figures/
+/code/analysis/pearson_analysis/pearson_bar_with_std_each_case_cross_source/*.svg

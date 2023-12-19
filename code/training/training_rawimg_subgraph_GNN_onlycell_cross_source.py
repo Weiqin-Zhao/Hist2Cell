@@ -104,8 +104,8 @@ class GraphNN(nn.Module):
         self.conv1 = GATv2Conv(in_channels=512, out_channels=int(self.embed_dim/self.head), heads=self.head)
         self.norm1 = LayerNorm(in_channels=self.embed_dim)
         
-        # self.conv2 = GATv2Conv(in_channels=self.embed_dim, out_channels=int(self.embed_dim/self.head), heads=self.head)
-        # self.norm2 = LayerNorm(in_channels=self.embed_dim)
+        self.conv2 = GATv2Conv(in_channels=self.embed_dim, out_channels=int(self.embed_dim/self.head), heads=self.head)
+        self.norm2 = LayerNorm(in_channels=self.embed_dim)
         
         self.head = Mlp(in_features=self.embed_dim, hidden_features=512*2, out_features=cell_dim)
         
@@ -116,8 +116,8 @@ class GraphNN(nn.Module):
         x_local = self.conv1(x=x_spot, edge_index=edge_index)
         x_local = self.norm1(x_local)
         
-        # x_local = self.conv2(x=x_local, edge_index=edge_index)
-        # x_local = self.norm2(x_local)
+        x_local = self.conv2(x=x_local, edge_index=edge_index)
+        x_local = self.norm2(x_local)
         
         cell_prediction = self.head(x_local)
         
