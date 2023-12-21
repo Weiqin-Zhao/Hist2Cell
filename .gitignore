@@ -203,3 +203,8 @@ core.*
 /code/data_preprocessing/brca_cellabundance/brca_cellabundance_estimation.h5ad
 /code/analysis/super_resolution/stnet/cell_abundance_paper_figures/
 /code/analysis/pearson_analysis/pearson_bar_with_std_each_case_cross_source/*.svg
+/code/analysis/super_resolution/humanlung/all_in_one/*
+/code/analysis/super_resolution/humanlung/cell_abundance_paper_figures/*
+/code/analysis/pearson_analysis/pearson_scatter_plot_all_case_brca/*.svg
+/code/analysis/sptial_colocalization/brca/*.svg
+/code/analysis/super_resolution/humanlung/inference/*.pkl
