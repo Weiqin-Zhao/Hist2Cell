@@ -208,3 +208,5 @@ core.*
 /code/analysis/pearson_analysis/pearson_scatter_plot_all_case_brca/*.svg
 /code/analysis/sptial_colocalization/brca/*.svg
 /code/analysis/super_resolution/humanlung/inference/*.pkl
+/code/analysis/pearson_analysis/pearson_scatter_plot_each_case_brca/*/*.png
+/code/analysis/pearson_analysis/pearson_scatter_plot_each_case_brca/*/*.svg

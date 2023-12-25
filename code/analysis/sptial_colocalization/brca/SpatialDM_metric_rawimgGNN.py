@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 import seaborn as sns
 from matplotlib_venn import venn2
+from tqdm import tqdm
 
 # pure statistics for bivariate Moran's R
 def Moran_R_std(spatial_W, by_trace=False):
@@ -96,27 +97,29 @@ for i in range(len(cell_names)):
     for j in range(i+1, len(cell_names)):
         combinations.append((cell_names[i], cell_names[j]))
         
-for case in test_slides:
+for case in tqdm(test_slides):
     # os.mkdir(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/analysis/sptial_colocalization/cross_source", case))
-    
-    save_path = "/data1/r20user3/shared_project/Hist2Cell/code/analysis/inference/brca/breast_cross_source_epoch100_lr1e-4_2hop_ensemble_Trans1layer_GNNoutput50_onlycell_"+case+"_best_cell_all_abundance_average.pkl"
-    pred_and_label = joblib.load(save_path)
-    
-    pred_and_label['cell_abundance_predictions'] = np.clip(pred_and_label['cell_abundance_predictions'], a_min=0, a_max=None)
-    
-    spot_coord = pred_and_label['coords']
-    
-    if spot_coord.shape[0] > 160:
-        X = csr_matrix(pred_and_label['cell_abundance_predictions'])
-        adata = ad.AnnData(X, obsm={"spatial": spot_coord})
-        adata.var_names = cell_names
+    try:
+        save_path = "/data1/r20user3/shared_project/Hist2Cell/code/analysis/inference/brca/breast_cross_source_epoch100_lr1e-4_2hop_ensemble_Trans1layer_GNNoutput50_onlycell_"+case+"_best_cell_all_abundance_average.pkl"
+        pred_and_label = joblib.load(save_path)
         
-        sdm.weight_matrix(adata, l=3.6, cutoff=0.2, single_cell=False, n_neighbors=160) 
-        df = pd.DataFrame(columns=['A', 'B', 'R_val', 'R_z_score', 'R_p_val'])
-        for pair in tqdm(combinations):
-            X = adata[:, pair[0]].X.A
-            Y = adata[:, pair[1]].X.A
-            R_val, R_z_score, R_p_val = Moran_R(X, Y, adata.obsp['weight'])
-            df.loc[len(df)] = [pair[0], pair[1], R_val[0], R_z_score[0], R_p_val[0]]
-        df_pred = df.sort_values('R_val', ascending=False)
-        df_pred.to_csv(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/analysis/sptial_colocalization/brca/results", case+"_MoranR_Hist2Cell.csv"))
+        pred_and_label['cell_abundance_predictions'] = np.clip(pred_and_label['cell_abundance_predictions'], a_min=0, a_max=None)
+        
+        spot_coord = pred_and_label['coords']
+        
+        if spot_coord.shape[0] > 160:
+            X = csr_matrix(pred_and_label['cell_abundance_predictions'])
+            adata = ad.AnnData(X, obsm={"spatial": spot_coord})
+            adata.var_names = cell_names
+            
+            sdm.weight_matrix(adata, l=3.6, cutoff=0.2, single_cell=False, n_neighbors=160) 
+            df = pd.DataFrame(columns=['A', 'B', 'R_val', 'R_z_score', 'R_p_val'])
+            for pair in tqdm(combinations):
+                X = adata[:, pair[0]].X.A
+                Y = adata[:, pair[1]].X.A
+                R_val, R_z_score, R_p_val = Moran_R(X, Y, adata.obsp['weight'])
+                df.loc[len(df)] = [pair[0], pair[1], R_val[0], R_z_score[0], R_p_val[0]]
+            df_pred = df.sort_values('R_val', ascending=False)
+            df_pred.to_csv(os.path.join("/data1/r20user3/shared_project/Hist2Cell/code/analysis/sptial_colocalization/brca/results", case+"_MoranR_Hist2Cell.csv"))
+    except:
+        continue
