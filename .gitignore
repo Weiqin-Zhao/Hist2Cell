@@ -210,3 +210,5 @@ core.*
 /code/analysis/super_resolution/humanlung/inference/*.pkl
 /code/analysis/pearson_analysis/pearson_scatter_plot_each_case_brca/*/*.png
 /code/analysis/pearson_analysis/pearson_scatter_plot_each_case_brca/*/*.svg
+/data/BRCA/WSI_temp_files/
+/data/brca.zip
