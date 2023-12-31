@@ -212,3 +212,17 @@ core.*
 /code/analysis/pearson_analysis/pearson_scatter_plot_each_case_brca/*/*.svg
 /data/BRCA/WSI_temp_files/
 /data/brca.zip
+/code/analysis/inference/brca_mag10_thre25/*
+/data1/r20user3/shared_project/Hist2Cell/data/sub*
+/data1/r20user3/shared_project/Hist2Cell/data/brca.zip
+/data1/r20user3/shared_project/Hist2Cell/data/sub_brca.z01
+data/sub_brca.z01
+data/sub_brca.z02
+data/sub_brca.z03
+data/sub_brca.z04
+data/sub_brca.z05
+data/sub_brca.z06
+data/sub_brca.z07
+data/sub_brca.z08
+data/sub_brca.z09
+data/sub_brca.zip
