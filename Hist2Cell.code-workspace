@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.defaultInterpreterPath": "/home/r15user3/anaconda3/envs/gene/bin/python3.11",
+		"python.defaultInterpreterPath": "/home/wqzhao/anaconda3/envs/gene/bin/python3.11",
 		"python.analysis.completeFunctionParens": true,
 		"python.analysis.autoImportCompletions": true
 	},
