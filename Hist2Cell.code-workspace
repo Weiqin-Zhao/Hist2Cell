@@ -46,7 +46,6 @@
 					"--train_set", "/data1/r20user3/shared_project/Hist2Cell/code/training/train_test_splits/her2st/train_leave_D.txt",
 					"--test_set", "/data1/r20user3/shared_project/Hist2Cell/code/training/train_test_splits/her2st/test_leave_D.txt",
 					"--num_epochs", "100",
-
 				],
 			}
 		]
