@@ -41,6 +41,15 @@ We upload the data in compressed format, please unzip them using `tar -xzvf` com
 The processed data of breast cancer will be realsed upon paper acceptance.
 
 
+## Training Models
+
+We have uploaded the checkpoint weight for healthy lung dataset in `./model_weights`.
+
+For training on your own dataset, we provide detailed training tutorials in `./cell_abundance_visulization_tutorial.ipynb` with the example data we uploaded.
+
+After preparing your own dataset following `./data_preparation_tutorial.ipynb`, users can train/finetune `Hist2Cell` on their own dataset for further cellular analysis.
+
+
 ## Cellular Analysis and Evaluation
 
 We uploaded the pretrained model weights on healthy human lung dataset in `./model_weights` and provide detailed tutorial steps for the cellular analysis conducted in our study:
@@ -48,14 +57,6 @@ We uploaded the pretrained model weights on healthy human lung dataset in `./mod
 - `./key_cell_evaluation_tutorial.ipynb`: evalute the prediction performance of `Hist2Cell` on serveral key cell types of interest, in this tutorial, we generate the figures used in `Fig 2.d`;
 - `./cell_colocalization_tutorial.ipynb`: analyse the cell co-localization patterns from histology image using `Hist2Cell`, in this tutorial, we generate the figures used in `Fig 2.f`;
 - `./super_resovled_cell_abundance_tutorial.ipynb`: produce super-resolved fine-grained cell type abundances using `Hist2Cell` for biological reserach, in this tutorial, we generate the figures used in `Fig 6.b`.
-
-
-## Training Models
-
-For training on your own dataset, we provide detailed training tutorials in `./cell_abundance_visulization_tutorial.ipynb` with the example data we uploaded.
-
-After preparing your own dataset following `./data_preparation_tutorial.ipynb`, users can train/finetune `Hist2Cell` on their own dataset for further cellular analysis.
-
 
 
 ## Citation
