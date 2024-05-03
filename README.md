@@ -6,7 +6,7 @@ Hist2Cell is a Vision Graph-Transformer framework that accurately predicts fine-
 For more details about this stuy, please check our paper [Hist2Cell: Deciphering Fine-grained Cellular Architectures from Histology Images](https://www.biorxiv.org/content/10.1101/2024.02.17.580852v1.full.pdf)
 
 
-## Install Environment
+## 1. Install Environment
 Create the environment with conda commands:
 ```
 conda create -n Hist2Cell python=3.11
@@ -23,7 +23,7 @@ pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -
 ```
 
 
-## Preparing Spatial Cell Abundance Data
+## 2. Preparing Spatial Cell Abundance Data
 
 All datasets are previously published and publicly accessible. 
 - The healthy lung dataset was downloaded from  https://5locationslung.cellgeni.sanger.ac.uk/. 
@@ -41,7 +41,7 @@ We upload the data in compressed format, please unzip them using `tar -xzvf` com
 The processed data of breast cancer will be realsed upon paper acceptance.
 
 
-## Training Models
+## 3. Training Models
 
 We have uploaded the checkpoint weight for healthy lung dataset in `./model_weights`.
 
@@ -50,7 +50,7 @@ For training on your own dataset, we provide detailed training tutorials in `./c
 After preparing your own dataset following `./data_preparation_tutorial.ipynb`, users can train/finetune `Hist2Cell` on their own dataset for further cellular analysis.
 
 
-## Cellular Analysis and Evaluation
+## 4. Cellular Analysis and Evaluation
 
 We uploaded the pretrained model weights on healthy human lung dataset in `./model_weights` and provide detailed tutorial steps for the cellular analysis conducted in our study:
 - `./cell_abundance_visulization_tutorial.ipynb`: visualize `Hist2Cell` predicted fine-grained cell abundance for biological finding validatoin, in this tutorial, we generate the figures used in `Fig 2.f` and `Fig 3.bc` in our paper;
