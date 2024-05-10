@@ -3,7 +3,7 @@ Hist2Cell is a Vision Graph-Transformer framework that accurately predicts fine-
 
 ![Overview](overview.jpg)
 
-For more details about this stuy, please check our paper [Hist2Cell: Deciphering Fine-grained Cellular Architectures from Histology Images](https://www.biorxiv.org/content/10.1101/2024.02.17.580852v1.full.pdf)
+For more details about this stuy, please check our paper [Hist2Cell: Deciphering Fine-grained Cellular Architectures from Histology Images](https://www.biorxiv.org/content/10.1101/2024.02.17.580852v1.full.pdf).
 
 
 ## 1. Install Environment
@@ -32,31 +32,31 @@ All datasets are previously published and publicly accessible.
 - The TCGA dataset was acquired from the Genomic Data Commons Data Portal at https://portal.gdc.cancer.gov/. 
 - The scRNA-seq data from the Human Breast Cell Atlas (HBCA) was downloaded from CELLxGENE at https://cellxgene.cziscience.com/collections/4195ab4c-20bd-4cd3-8b3d-65601277e731. 
 
-We provide processed example data of the healthy lung dataset in `./example_data/humanlung_cell2location` and `./example_data/humanlung_cell2location` (for super-resolved cell abundances usage).
-
 We also provide example raw data in `./example_raw_data` and the pre-process tutorials in `./data_preparation_tutorial.ipynb`. Users can pre-process their own datasets following the same steps for inference/training/fine-tuning.
 
-We upload the data in compressed format, please unzip them using `tar -xzvf` command.
+We provide processed example data of the healthy lung dataset in `./example_data/humanlung_cell2location` and `./example_data/humanlung_cell2location_2x` (for super-resolved cell abundances usage).
 
-The processed data of breast cancer will be realsed upon paper acceptance.
+We upload the data in compressed format via Onedrive, please download the data and unzip them using `tar -xzvf` command.
+
+The processed data of breast cancer will be realsed soon.
 
 
 ## 3. Training Models
 
 We have uploaded the checkpoint weight for healthy lung dataset in `./model_weights`.
 
-For training on your own dataset, we provide detailed training tutorials in `./cell_abundance_visulization_tutorial.ipynb` with the example data we uploaded.
+For training on your own dataset, we provide detailed training tutorials in `./tutorial_training/training_tutorial.ipynb` with the example data we uploaded.
 
-After preparing your own dataset following `./data_preparation_tutorial.ipynb`, users can train/finetune `Hist2Cell` on their own dataset for further cellular analysis.
+After preparing your own dataset following `./tutorial_data_preparation/data_preparation_tutorial.ipynb`, users can train/finetune `Hist2Cell` on their own dataset for further cellular analysis.
 
 
 ## 4. Cellular Analysis and Evaluation
 
 We uploaded the pretrained model weights on healthy human lung dataset in `./model_weights` and provide detailed tutorial steps for the cellular analysis conducted in our study:
-- `./cell_abundance_visulization_tutorial.ipynb`: visualize `Hist2Cell` predicted fine-grained cell abundance for biological finding validatoin, in this tutorial, we generate the figures used in `Fig 2.f` and `Fig 3.bc` in our paper;
-- `./key_cell_evaluation_tutorial.ipynb`: evalute the prediction performance of `Hist2Cell` on serveral key cell types of interest, in this tutorial, we generate the figures used in `Fig 2.d`;
-- `./cell_colocalization_tutorial.ipynb`: analyse the cell co-localization patterns from histology image using `Hist2Cell`, in this tutorial, we generate the figures used in `Fig 2.f`;
-- `./super_resovled_cell_abundance_tutorial.ipynb`: produce super-resolved fine-grained cell type abundances using `Hist2Cell` for biological reserach, in this tutorial, we generate the figures used in `Fig 6.b`.
+- `./tutorial_analysis_evaluation/cell_abundance_visulization_tutorial.ipynb`: visualize `Hist2Cell` predicted fine-grained cell abundance for biological finding validatoin, in this tutorial, we generate the figures used in `Fig 2.f` and `Fig 3.bc` in our paper;
+- `./tutorial_analysis_evaluation/key_cell_evaluation_tutorial.ipynb`: evalute the prediction performance of `Hist2Cell` on serveral key cell types of interest, in this tutorial, we generate the figures used in `Fig 2.d`;
+- `./tutorial_analysis_evaluation/cell_colocalization_tutorial.ipynb`: analyse the cell co-localization patterns from histology image using `Hist2Cell`, in this tutorial, we generate the figures used in `Fig 2.f`;
+- `./tutorial_analysis_evaluation/super_resovled_cell_abundance_tutorial.ipynb`: produce super-resolved fine-grained cell type abundances using `Hist2Cell` for biological reserach, in this tutorial, we generate the figures used in `Fig 6.b`.
 
 
 ## Citation
