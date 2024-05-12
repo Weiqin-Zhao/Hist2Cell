@@ -32,7 +32,7 @@ All datasets are previously published and publicly accessible.
 - The TCGA dataset was acquired from the Genomic Data Commons Data Portal at https://portal.gdc.cancer.gov/. 
 - The scRNA-seq data from the Human Breast Cell Atlas (HBCA) was downloaded from CELLxGENE at https://cellxgene.cziscience.com/collections/4195ab4c-20bd-4cd3-8b3d-65601277e731. 
 
-We also provide example raw data in `./example_raw_data` and the pre-process tutorials in `./data_preparation_tutorial.ipynb`. Users can pre-process their own datasets following the same steps for inference/training/fine-tuning.
+We also provide example raw data in `./example_data/example_raw_data` and the pre-process tutorials in `./tutorial_data_preparation/data_preparation_tutorial.ipynb`. Users can pre-process their own datasets following the same steps for inference/training/fine-tuning.
 
 We provide processed example data of the healthy lung dataset in `./example_data/humanlung_cell2location` and `./example_data/humanlung_cell2location_2x` (for super-resolved cell abundances usage).
 
