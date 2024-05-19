@@ -38,8 +38,6 @@ We provide processed example data of the healthy lung dataset in `./example_data
 
 We upload the data in compressed format via Onedrive, please download the data and unzip them using `tar -xzvf` command.
 
-The processed data of breast cancer will be realsed soon.
-
 
 ## 3. Training Models
 
