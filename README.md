@@ -8,6 +8,7 @@ For more details about this study, please check our paper [Hist2Cell: Decipherin
 
 ## 1. Install Environment
 The study is conducted on Ubuntu 22.04.4 LTS.
+
 Create the environment with conda commands:
 ```
 conda create -n Hist2Cell python=3.11
