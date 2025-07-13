@@ -39,6 +39,8 @@ All datasets are previously published and publicly accessible.
 - The STNet dataset was sourced from https://data.mendeley.com/datasets/29ntw7sh4r/5. 
 - The TCGA dataset was acquired from the Genomic Data Commons Data Portal at https://portal.gdc.cancer.gov/. 
 - The scRNA-seq data from the Human Breast Cell Atlas (HBCA) was downloaded from CELLxGENE at https://cellxgene.cziscience.com/collections/4195ab4c-20bd-4cd3-8b3d-65601277e731. 
+- The skin-disease and HEST-1k datasets wasr sourced from https://huggingface.co/datasets/MahmoodLab/hest.
+- The scRNA-seq data of skin-disease was downloaded from https://cellxgene.cziscience.com/collections/34f12de7-c5e5-4813-a136-832677f98ac8.
 
 We also provide example raw data in `./example_data/example_raw_data` and the pre-process tutorials in `./tutorial_data_preparation/data_preparation_tutorial.ipynb`. Users can pre-process their own datasets following the same steps for inference/training/fine-tuning.
 
