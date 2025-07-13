@@ -5,7 +5,12 @@ Hist2Cell is a Vision Graph-Transformer framework that accurately predicts fine-
 
 For more details about this study, please check our paper [Hist2Cell: Deciphering Fine-grained Cellular Architectures from Histology Images](https://www.biorxiv.org/content/10.1101/2024.02.17.580852v1.full.pdf).
 
-## New features
+## TODO:
+- Add new data application instructions:
+  - How to cell deconvolution;
+  - How to segment WSI;
+- Add new pathology foundation model support;
+- Upload new data;
 
 ## 1. Install Environment
 The study is conducted on Ubuntu 22.04.4 LTS.
